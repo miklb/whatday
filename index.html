@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Fucking Day is it?</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #001E2E;
+            text-align: center;
+            color: white;
+            }
+
+        .first {
+            font-size: 12vh;
+            align-self: flex-start;
+        }
+
+        .day {
+            padding-left: 5px;
+            font-size: 12vh;
+            align-self: flex-start;
+        }
+    
+    </style>
+</head>
+<body>
+    <p class="first">Would you believe it is</p>
+    <p class="day">?</p>
+    <script>
+        var d = new Date();
+        var el = document.querySelector(".day");
+        el.innerHTML = day(d.getDay()) + el.innerHTML;
+
+        function day(n)
+	{
+		let days = ['Sunday', 
+                    'Monday', 
+                    'Tuesday', 
+                    'Wednesday', 
+                    'Thursday', 
+                    'Friday', 
+                    'Saturday']
+		return days[n]
+	}
+    </script>
+</body>
+</html>
